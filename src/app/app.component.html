@@ -12,9 +12,13 @@
 </div>
 
 <div class="content" role="main">
-  <input type="text" value="Hello World">
+  <input type="text" (keyup)="inputChanged(txtInput)" #txtInput value="Hello World">
   <hr>
-  <p class="p-3">Here is our New Contact</p>
+  <h3 class="p-3">Here is our New Contact</h3>
+  <p class="p-3">{{contactAddress}}</p>
+  <span>Input Value is : {{input}}</span>
+
+  <button (click)="confim()" class="btn btn-outline-primary btn-md">Click Here To Login</button>
 </div>
 -
 
