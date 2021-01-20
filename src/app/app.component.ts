@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'address-book';
+  contactAddress = "12 Ado Road Ajah";
+  phoneNumber ="0806 9273499";
 }

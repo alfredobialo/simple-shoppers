@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "address-book"
+  "defaultProject": "address-book",
+  "cli": {
+    "analytics": "35244634-90c2-4333-8184-5ed5633620e3"
+  }
 }
