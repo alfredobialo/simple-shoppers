@@ -2,14 +2,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { AddressBookContactComponent } from './address-book-contact/address-book-contact.component';
-import {AddressBookComponent} from "./components/address-book/address-book";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+import {InventoryItemComponent} from "./inventory-manager/components/inventory-item-component";
+import {InventoryListComponent} from "./inventory-manager/components/inventory-list-component";
 @NgModule({
   declarations: [
     AppComponent,
-    AddressBookContactComponent,
-    AddressBookComponent
+    InventoryItemComponent,
+    InventoryListComponent
   ],
   imports: [
     BrowserModule,
