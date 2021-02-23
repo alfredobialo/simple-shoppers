@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --port 8888 -o --hmr",
-    "build": "ng build --optimization --aot --build-optimizer --named-chunks",
+    "build": "ng build --prod --optimization --aot --build-optimizer --named-chunks",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
