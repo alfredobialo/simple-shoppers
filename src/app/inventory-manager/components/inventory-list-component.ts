@@ -2,6 +2,9 @@ import {Component} from "@angular/core";
 
 @Component({
   template: `
+    <div class="mb-4">
+      <add-inventory-component></add-inventory-component>
+    </div>
     <table class="table table-bordered">
       <tr>
         <th>Name</th>
@@ -58,7 +61,12 @@ export class InventoryListComponent {
       qty : 8,
       description : "Best Smartphone ever with 16Gb of Memory and high diplay"
     },
-
   ];
+  predictNextStep(name: string){
+    let accBal = 30000;
+    //.... Logic
 
+    accBal = 50000;
+
+  }
 }
