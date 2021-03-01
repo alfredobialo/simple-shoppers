@@ -25,6 +25,8 @@ import {Component} from "@angular/core";
         </td>
       </tr>
     </table>
+
+    <ng-if-structural-directive title="This is a list Inventory (updated)"></ng-if-structural-directive>
   `,
   selector: "sc-inventory-list"
 })
