@@ -1,0 +1,28 @@
+<div class="p-4">
+  <h2>Add Inventory</h2>
+  <hr>
+  <div class="alert alert-primary">
+    <p class="lead font-weight-bold text-white">{{itemName}}</p>
+  </div>
+  <div class="row">
+    <div class="col-3">Name</div>
+    <div class="col-9 mb-4">
+      <input #txtName type="text"
+             (keyup)="setItemName(txtName.value)"
+             class="form-control form-control-lg" placeholder="Inventory Name"></div>
+    <div class="col-3">Amount</div>
+    <div class="col-9 mb-4">
+      <input type="number" class="form-control form-control-lg" placeholder="Selling Price"></div>
+    <div class="col-3">Qty In Stock</div>
+    <div class="col-9 mb-4">
+      <input type="number" class="form-control form-control-lg" placeholder="Stock In"></div>
+    <div class="col-3">Id</div>
+    <div class="col-9 mb-4">
+      <input type="text" class="form-control form-control-lg" placeholder="Unique Id"></div>
+  </div>
+
+  <div class="p-2 mt-4">
+    <ng-if-structural-directive></ng-if-structural-directive>
+    <button (click)="printSalesReport()" class="btn btn-primary btn-lg">Add Inventory</button>
+  </div>
+</div>
