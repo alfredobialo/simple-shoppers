@@ -8,6 +8,7 @@ import {InventoryItemComponent} from "./inventory-manager/components/inventory-i
 import {InventoryListComponent} from "./inventory-manager/components/inventory-list-component";
 import {AddInventoryComponent} from "./inventory-manager/components/add-inventory-component";
 import {NgIfStructuralDirectiveComponent} from "./inventory-manager/components/structural-directive/ngIf-structural-directive";
+import {NgForStructuralDirectiveComponent} from "./inventory-manager/components/structural-directive/ngFor-structural-directive";
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import {NgIfStructuralDirectiveComponent} from "./inventory-manager/components/s
     InventoryItemComponent,
     InventoryListComponent,
     AddInventoryComponent,
-    NgIfStructuralDirectiveComponent
+    NgIfStructuralDirectiveComponent,
+    NgForStructuralDirectiveComponent
   ],
   imports: [
     BrowserModule,

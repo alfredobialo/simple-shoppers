@@ -7,6 +7,7 @@ import {Component} from "@angular/core";
     </div>
     <table class="table table-bordered">
       <tr>
+        <th>S/N</th>
         <th>Name</th>
         <th>Description</th>
         <th>Price</th>
@@ -14,7 +15,8 @@ import {Component} from "@angular/core";
         <th>Category</th>
         <th></th>
       </tr>
-      <tr *ngFor="let p of products">
+      <tr *ngFor="let p of products; let index = index;">
+        <td>{{index + 1}}</td>
         <td>{{p.name}}</td>
         <td>{{p.description}}</td>
         <td>{{p.amount | currency}}</td>
@@ -31,15 +33,14 @@ import {Component} from "@angular/core";
   selector: "sc-inventory-list"
 })
 export class InventoryListComponent {
-  products = [
-    {
-      id: "001",
-      name : "iPhone 11 Pro",
-      amount : 999,
-      qty : 16,
-      description : "Durable Screen with 60Hz refresh rate, iPhone 11 Pro a Game" +
-        " changer in the industry!"
-    },
+  products = [ {
+    id: "001",
+    name : "iPhone 11 Pro",
+    amount : 999,
+    qty : 16,
+    description : "Durable Screen with 60Hz refresh rate, iPhone 11 Pro a Game" +
+      " changer in the industry!"
+  },
     {
       id: "002",
       name : "iPhone 12 Pro",
@@ -62,8 +63,8 @@ export class InventoryListComponent {
       amount : 1399,
       qty : 8,
       description : "Best Smartphone ever with 16Gb of Memory and high diplay"
-    },
-  ];
+    },]
+  ;
   predictNextStep(name: string){
     let accBal = 30000;
     //.... Logic
