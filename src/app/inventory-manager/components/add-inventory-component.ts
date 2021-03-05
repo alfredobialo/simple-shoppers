@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {ProductItem, ProductItemWithSalesHistory, SalesHistoryItem} from "../../sales-manager/models/sales-invoice";
 
 @Component({
   selector: 'add-inventory-component',
@@ -20,10 +21,20 @@ export class AddInventoryComponent  implements OnInit {
   hasError: boolean = false;
   errMessage: string = "";
   defaultProductPlaceHolder = "iPhone 12 Pro Max";
+
+  myProduct : ProductItem =  new ProductItem();
+  mySaleItem : ProductItemWithSalesHistory;
+
   constructor() {
+    this.mySaleItem = new ProductItemWithSalesHistory();
+    this.mySaleItem.salesHistory = [new SalesHistoryItem()];
   }
 
   ngOnInit() {
+    this.myProduct.name = "Galaxy S21 Pro";
+    this.myProduct.amount = 1300;
+    this.myProduct.description = "The best Smartphone of 2021 from Samsung";
+    this.myProduct.isActive =true;
   }
   setItemName(itemName : string){
     this.itemName = itemName;

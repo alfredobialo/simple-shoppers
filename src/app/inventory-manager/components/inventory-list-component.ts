@@ -33,7 +33,8 @@ import {Component} from "@angular/core";
   selector: "sc-inventory-list"
 })
 export class InventoryListComponent {
-  products = [ {
+  products= [
+    {
     id: "001",
     name : "iPhone 11 Pro",
     amount : 999,
@@ -63,7 +64,8 @@ export class InventoryListComponent {
       amount : 1399,
       qty : 8,
       description : "Best Smartphone ever with 16Gb of Memory and high diplay"
-    },]
+    },
+  ]
   ;
   predictNextStep(name: string){
     let accBal = 30000;

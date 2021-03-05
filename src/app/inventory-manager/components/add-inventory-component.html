@@ -28,4 +28,11 @@
     <ng-if-structural-directive></ng-if-structural-directive>
     <button (click)="addItem()" class="btn btn-primary btn-lg">Add Inventory</button>
   </div>
+
+  <div>
+    <p class="lead">Product Info</p>
+    <p class="h3">{{myProduct.name}}</p>
+    <p class="h3">{{myProduct.amount | currency}}</p>
+    <p class="h3">{{myProduct.description}}</p>
+  </div>
 </div>
