@@ -22,12 +22,13 @@ export class AddInventoryComponent  implements OnInit {
   errMessage: string = "";
   defaultProductPlaceHolder = "iPhone 12 Pro Max";
 
-  myProduct : ProductItem =  new ProductItem();
+  myProduct : ProductItem = null;
+
   mySaleItem : ProductItemWithSalesHistory;
 
   constructor() {
-    this.mySaleItem = new ProductItemWithSalesHistory();
-    this.mySaleItem.salesHistory = [new SalesHistoryItem()];
+    /*this.mySaleItem = new ProductItemWithSalesHistory();
+    this.mySaleItem.salesHistory = [new SalesHistoryItem()];*/
   }
 
   ngOnInit() {
