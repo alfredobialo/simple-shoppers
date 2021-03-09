@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ProductItem, ProductItemWithSalesHistory, SalesHistoryItem} from "../../sales-manager/models/sales-invoice";
+import {InventoryService} from "../../sales-manager/services/InventoryService";
 
 @Component({
   selector: 'add-inventory-component',
@@ -16,33 +17,27 @@ import {ProductItem, ProductItemWithSalesHistory, SalesHistoryItem} from "../../
     }
   `]
 })
-export class AddInventoryComponent  implements OnInit {
-  itemName: string;
-  hasError: boolean = false;
-  errMessage: string = "";
-  defaultProductPlaceHolder = "iPhone 12 Pro Max";
+export class AddInventoryComponent implements OnInit {
 
-  myProduct : ProductItem = null;
 
-  mySaleItem : ProductItemWithSalesHistory;
+  constructor(private inventoryService : InventoryService) {
 
-  constructor() {
-    /*this.mySaleItem = new ProductItemWithSalesHistory();
-    this.mySaleItem.salesHistory = [new SalesHistoryItem()];*/
   }
 
   ngOnInit() {
-    this.myProduct.name = "Galaxy S21 Pro";
-    this.myProduct.amount = 1300;
-    this.myProduct.description = "The best Smartphone of 2021 from Samsung";
-    this.myProduct.isActive =true;
-  }
-  setItemName(itemName : string){
-    this.itemName = itemName;
-  }
-  addItem(){
-    this.hasError = true;
-    this.errMessage ="Your input has issues: Ensure the product has a valid Name";
+
   }
 
+
+  addNewItem(id: string, name: string, amt: string, qty: string) {
+    let newItem = {
+      id: id,
+      name: name,
+      amount: parseFloat(amt),
+      qty: parseFloat(qty),
+      description: "Product Description Omitted!"
+    };
+    console.log(newItem);
+    this.inventoryService.addNewProduct(newItem);
+  }
 }

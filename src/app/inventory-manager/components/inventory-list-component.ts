@@ -23,7 +23,7 @@ import {InventoryCategoryService} from "../../sales-manager/services/inventory-c
         <th></th>
       </tr>
       <ng-container *ngIf="products.length > 0 ">
-        <tr *ngFor="let p of products; let index = index;">
+        <tr *ngFor="let p of inventoryService.getProducts(); let index = index;">
           <td>{{index + 1}}</td>
           <td>{{p.name}}</td>
           <td>{{p.description}}</td>
@@ -50,7 +50,7 @@ export class InventoryListComponent {
   products = [];
   categories: string[];
 
-  constructor(private inventoryService : InventoryService,
+  constructor(public inventoryService : InventoryService,
               private categoryService : InventoryCategoryService)
   {
     this.products  = inventoryService.getProducts();

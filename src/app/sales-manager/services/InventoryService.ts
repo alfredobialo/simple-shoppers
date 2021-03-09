@@ -42,5 +42,10 @@ export class InventoryService{
   getProducts(){
     return this.products;
   }
+  addNewProduct(product : any){
+    this.products = [product,...this.products];
+    console.log(this.products);
+    //this.products.push(product);
+  }
 
 }

@@ -1,38 +1,27 @@
 <div class="p-4">
-  <div class="p-3" [ngClass]="{'bg-err': hasError}">
-     {{errMessage}}
-  </div>
+
   <h2>Add Inventory</h2>
   <hr>
-  <div class="alert alert-primary">
-    <p class="lead font-weight-bold text-white">{{itemName}}</p>
-  </div>
+
   <div class="row">
     <div class="col-3">Name</div>
     <div class="col-9 mb-4">
       <input #txtName type="text"
-             (keyup)="setItemName(txtName.value)"
-             class="form-control form-control-lg" placeholder="eg:  {{defaultProductPlaceHolder}}"></div>
+             class="form-control form-control-lg" placeholder="eg:  macbook pro"></div>
     <div class="col-3">Amount</div>
     <div class="col-9 mb-4">
-      <input type="number" class="form-control form-control-lg" placeholder="Selling Price"></div>
+      <input type="number" #txtAmt class="form-control form-control-lg" placeholder="Selling Price"></div>
     <div class="col-3">Qty In Stock</div>
     <div class="col-9 mb-4">
-      <input type="number" class="form-control form-control-lg" placeholder="Stock In"></div>
+      <input type="number" #txtQty class="form-control form-control-lg" placeholder="Stock In"></div>
     <div class="col-3">Id</div>
     <div class="col-9 mb-4">
-      <input type="text" class="form-control form-control-lg" placeholder="Unique Id"></div>
+      <input type="text" #txtId class="form-control form-control-lg" placeholder="Unique Id"></div>
   </div>
 
   <div class="p-2 mt-4">
 
-    <button (click)="addItem()" class="btn btn-primary btn-lg">Add Inventory</button>
+    <button (click)="addNewItem(txtId.value,txtName.value,txtAmt.value, txtQty.value)" class="btn btn-primary btn-lg">Add Inventory</button>
   </div>
 
-  <div>
-    <p class="lead">Product Info</p>
-    <p class="h3">{{myProduct.name}}</p>
-    <p class="h3">{{myProduct.amount | currency}}</p>
-    <p class="h3">{{myProduct.description}}</p>
-  </div>
 </div>
