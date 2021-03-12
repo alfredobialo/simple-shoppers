@@ -13,18 +13,17 @@
 
 <div class="content" role="main">
   <div class="container">
-    <div class="mb-5">
-      <sales-dashboard-page *ngIf="showSalesPages"></sales-dashboard-page>
-      <br>
-      <button class="btn btn-outline-primary" (click)="showSalesPages = !showSalesPages">Show/Hide</button>
+    <div class="row">
+      <div class="col-2">
+        <a routerLink="/index"  routerLinkActive="btn-primary text-white" class="btn btn-block btn-outline-primary">Home</a>
+        <a routerLink="/inventory" routerLinkActive="btn-primary text-white" class="btn btn-block btn-outline-primary">Inventory</a>
+        <a routerLink="/ngif" routerLinkActive="btn-primary text-white" class="btn btn-block btn-outline-primary">NgIF</a>
+        <a routerLink="/ngfor" routerLinkActive="btn-primary text-white" class="btn btn-block btn-outline-primary">NgFor</a>
+      </div>
+      <div class="col-10">
+         <router-outlet></router-outlet>
+      </div>
     </div>
-   <ng-for-structural-directive></ng-for-structural-directive>
-    <sc-inventory-item></sc-inventory-item>
-    <div class="mt-4">
-      <sc-inventory-list></sc-inventory-list>
-    </div>
-
-
   </div>
 </div>
 -

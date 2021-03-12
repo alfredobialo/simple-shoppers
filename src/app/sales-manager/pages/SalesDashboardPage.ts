@@ -30,11 +30,11 @@ export class SalesDashboardPageComponent implements OnInit, OnDestroy {
       },
     ]
     console.log(this.salesAnalysis);
-    alert("SalesDashboardPage Component Initialized");
+    //alert("SalesDashboardPage Component Initialized");
   }
 
   ngOnDestroy(): void {
-    alert("SalesDashboardPage is Destroyed");
+    //alert("SalesDashboardPage is Destroyed");
     // clean code: free up memory usage
   }
 }
