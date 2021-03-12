@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {InventoryManagerModule} from "./inventory-manager/InventoryManagerModule";
 import {StructuralDirectiveModule} from "./structural-directive/StructuralDirectiveModule";
+import {SalesModule} from "./sales-manager/SalesModule";
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import {StructuralDirectiveModule} from "./structural-directive/StructuralDirect
     BrowserModule,
     NgbModule,
     InventoryManagerModule,
-    StructuralDirectiveModule
+    StructuralDirectiveModule,
+    SalesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
