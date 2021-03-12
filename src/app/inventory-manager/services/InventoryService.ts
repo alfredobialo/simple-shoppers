@@ -1,7 +1,6 @@
 import {Injectable} from "@angular/core";
-import {InventoryCategoryService} from "./inventory-category-service";
 
-@Injectable({ providedIn : 'root'})
+@Injectable()
 export class InventoryService{
   products= [
     {

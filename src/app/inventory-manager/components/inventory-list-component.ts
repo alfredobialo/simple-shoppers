@@ -1,7 +1,6 @@
 import {Component} from "@angular/core";
-import {ProductItemWithSalesHistory} from "../../sales-manager/models/sales-invoice";
-import {InventoryService} from "../../sales-manager/services/InventoryService";
-import {InventoryCategoryService} from "../../sales-manager/services/inventory-category-service";
+import {InventoryService} from "../services/InventoryService";
+import {InventoryCategoryService} from "../services/inventory-category-service";
 
 @Component({
   template: `
@@ -42,7 +41,7 @@ import {InventoryCategoryService} from "../../sales-manager/services/inventory-c
         <p class="lead text-info">There are no Products to display</p>
       </div>
     </ng-container>
-    <ng-if-structural-directive title="This is a list Inventory (updated)"></ng-if-structural-directive>
+<!--    <ng-if-structural-directive title="This is a list Inventory (updated)"></ng-if-structural-directive>-->
   `,
   selector: "sc-inventory-list"
 })

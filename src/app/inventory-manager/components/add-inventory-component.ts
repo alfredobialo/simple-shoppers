@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ProductItem, ProductItemWithSalesHistory, SalesHistoryItem} from "../../sales-manager/models/sales-invoice";
-import {InventoryService} from "../../sales-manager/services/InventoryService";
+import {InventoryService} from "../services/InventoryService";
 
 @Component({
   selector: 'add-inventory-component',
